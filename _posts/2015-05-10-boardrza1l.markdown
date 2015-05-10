@@ -1,0 +1,9 @@
+---
+layout: post
+title:  "Board RZA1L"
+date:   2015-05-10 13:23:00
+categories: boards rza1 design
+---
+
+**Placa Cortex A9**
+
