@@ -8,7 +8,7 @@ copyright: Martin Ribelotta
 services:
     # GA Tracking ID
     googleAnalytics:
-        id:
+        id: G-E962FFEWTP
 
 permalinks:
     post: /p/:slug/
