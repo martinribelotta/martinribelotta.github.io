@@ -10,6 +10,10 @@ paginate = 20
 
 # disqusShortname = "yourdiscussshortname"
 
+[services]
+  [services.googleAnalytics]
+    ID = 'G-E962FFEWTP'
+
 [markup]
   defaultMarkdownHandler = 'goldmark'
 
