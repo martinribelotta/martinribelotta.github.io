@@ -1,0 +1,95 @@
+baseurl = "https://martinribelotta.github.io"
+title = "Martin Ribelotta Development Services"
+theme = ["hugo-embed-pdf-shortcode", "hugo-coder"]
+languagecode = "en"
+defaultcontentlanguage = "en"
+enableInlineShortcodes = true
+tableOfContents = true
+
+paginate = 20
+
+# disqusShortname = "yourdiscussshortname"
+
+[markup]
+  defaultMarkdownHandler = 'goldmark'
+
+[markup.goldmark.renderer]
+  hardWraps = true
+  unsafe = true
+  xhtml = true
+
+[markup.tableOfContents]
+  endLevel = 3
+  ordered = false
+  startLevel = 2
+
+[markup.highlight]
+  style = "github-dark"
+
+[params]
+  author = "Martin Ribelotta"
+  info = "Embedded Developer and Electronics Specialist"
+  description = "Martin Ribelotta's personal website"
+  keywords = "blog,developer,personal"
+  avatarurl = "images/avatar.jpg"
+  #gravatar = "john.doe@example.com"
+
+  faviconSVG = "/images/favicon.svg"
+  favicon_32 = "/images/favicon-32x32.png"
+  favicon_16 = "/images/favicon-16x16.png"
+
+  since = 2024
+
+  enableTwemoji = true
+
+  colorScheme = "auto"
+  hidecolorschemetoggle = false
+
+  # customCSS = ["css/custom.css"]
+  # customSCSS = ["scss/custom.scss"]
+  # customJS = ["js/custom.js"]
+
+[taxonomies]
+  category = "categories"
+  series = "series"
+  tag = "tags"
+  author = "authors"
+
+# Social links
+[[params.social]]
+  name = "Github"
+  icon = "fa-brands fa-github fa-2x"
+  weight = 1
+  url = "https://github.com/martinribelotta/"
+[[params.social]]
+  name = "Gitlab"
+  icon = "fa-brands fa-gitlab fa-2x"
+  weight = 2
+  url = "https://gitlab.com/martinribelotta/"
+[[params.social]]
+  name = "LinkedIn"
+  icon = "fa-brands fa-linkedin fa-2x"
+  weight = 4
+  url = "https://www.linkedin.com/in/martin-ribelotta/"
+
+# Menu links
+[[menu.main]]
+  name = "About"
+  weight = 1
+  url = "about/"
+[[menu.main]]
+  name = "Curriculum"
+  weight = 2
+  url = "cv/"
+[[menu.main]]
+  name = "Projects"
+  weight = 3
+  url = "projects/"
+[[menu.main]]
+  name = "Blog"
+  weight = 4
+  url  = "post/"
+[[menu.main]]
+  name = "Contact"
+  weight = 5
+  url = "contact/"
