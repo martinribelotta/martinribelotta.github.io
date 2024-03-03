@@ -1,5 +1,5 @@
 baseurl = "https://martinribelotta.github.io"
-title = "Martin Ribelotta Development Services"
+title = "Development Services"
 theme = ["hugo-embed-pdf-shortcode", "hugo-coder"]
 languagecode = "en"
 defaultcontentlanguage = "en"
