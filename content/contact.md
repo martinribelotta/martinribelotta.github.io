@@ -9,4 +9,4 @@ Let's connect and explore possibilities in the ever-evolving landscape of electr
 
 <i class="fa-brands fa-github fa-1x"></i> [My github projects](https://github.com/martinribelotta)
 
-<i class="fa fa-envelope fa-1x"></i> [mailto: Martin Ribelotta \<martinribelotta@gmail.com\>](martinribelotta@gmail)
+<i class="fa fa-envelope fa-1x"></i> [mailto: Martin Ribelotta \<martinribelotta@gmail.com\>](mailto:martinribelotta@gmail)
