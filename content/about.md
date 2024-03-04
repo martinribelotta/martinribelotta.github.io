@@ -18,7 +18,7 @@ Passionate about crafting innovative solutions in the realm of embedded systems,
 
  - 🛬 **Mission-Critical Projects**: Successfully contributed to and led projects in mission-critical environments, where reliability, performance, and precision are non-negotiable.
 
- - 🦾 **Industrial Prowes**s: Specializing in industrial electronics, I have a proven track record of creating solutions that enhance automation, control, and monitoring processes in industrial settings.
+ - 🦾 **Industrial Prowess**: Specializing in industrial electronics, I have a proven track record of creating solutions that enhance automation, control, and monitoring processes in industrial settings.
 
  - 👨‍🔬 **Cross-Disciplinary Collaboration**: Adept at collaborating across disciplines, I have worked seamlessly with cross-functional teams to bring multidimensional projects to fruition.
 
