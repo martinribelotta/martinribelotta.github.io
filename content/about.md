@@ -26,4 +26,8 @@ Passionate about crafting innovative solutions in the realm of embedded systems,
 
 Should you require specialized services in electronic design (schematics and PCB), embedded firmware development for microcontrollers, embedded Linux design for application processors, FPGA design in VHDL or Verilog, or software systems development in C/C++ for Linux, I invite you to get in touch. Your unique project deserves a tailored approach, and I am here to discuss how my expertise can bring value to your specific needs. Feel free to reach out, and let's initiate a conversation about turning your concepts into successful solutions.
 
+For a glimpse of my open source projects, explore my portfolio in [this link](/projects/)
+
+Tailored to meet your needs, my services can be engaged either on a project or hourly basis. For a seamless and goal-oriented experience, I encourage clients to opt for project-based contracts. Hourly arrangements are best suited for dynamic, evolving projects. The cost of my services is negotiable based on the complexity and scope of the project.
+
 Explore [my contact page](/contact/) to delve into the details of my projects and contributions, showcasing a hands-on approach to problem-solving and a commitment to excellence in the field of embedded systems.
