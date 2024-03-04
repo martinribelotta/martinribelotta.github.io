@@ -65,16 +65,25 @@ paginate = 20
   icon = "fa-brands fa-github fa-2x"
   weight = 1
   url = "https://github.com/martinribelotta/"
+  desc = "Explore my public projects on github"
 [[params.social]]
   name = "Gitlab"
   icon = "fa-brands fa-gitlab fa-2x"
   weight = 2
   url = "https://gitlab.com/martinribelotta/"
+  desc = "Explore my public projects on gitlab"
 [[params.social]]
   name = "LinkedIn"
   icon = "fa-brands fa-linkedin fa-2x"
-  weight = 4
+  weight = 3
   url = "https://www.linkedin.com/in/martin-ribelotta/"
+  desc = "View my profile on LinkedIn"
+[[params.social]]
+  name = "mailto"
+  icon = "fa fa-envelope fa-2x"
+  weight = 4
+  url = "mailto:martinribelotta@gmail.com"
+  desc = "Ask a question directly to my mail"
 
 # Menu links
 [[menu.main]]
