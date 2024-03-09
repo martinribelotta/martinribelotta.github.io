@@ -13,15 +13,14 @@ The goal of this project is provide a loader for ELF file format for ARMv7-M (th
 
 This loader not required MMU or special OS support (only aligned memory alloc) and run with minimun memory overhead (only required parts of files is loaded in memory).
 
-This is developed using gcc arm embedded compiler from GCC arm embedded (arm-none-eabi) but is successful tested with linaro arm-linux-gnueabihf in freestangin mode.
+This was developed using the GCC compiler from GCC Arm Embedded (arm-none-eabi) but has been successfully tested with Linaro arm-linux-gnueabihf in freestanding mode
 
 A very complete blog about this project can be [found here](https://ourembeddeds.github.io/blog/2020/08/16/elf-loader/)
 
 ![](https://ourembeddeds.github.io/img/articles/elf-loader/mcu-executable-load.png)
 
 ## [Embedded Logger](https://github.com/martinribelotta/elog)
-
-This log system is thinked for embedded systems with minimal resource utilization. It's designed to minimize memory compsumition in flash or RAM, enable an eficient in-ram loggin buffer with very efficient storage.
+This logging system is designed for embedded systems with minimal resource utilization. It's intended to minimize memory consumption in flash or RAM, enabling an efficient in-ram logging buffer with very efficient storage.
 
 ![](https://github.com/martinribelotta/elog/raw/master/doc/objcopy-process.png)
 
@@ -58,15 +57,22 @@ Additionally, [this project](https://github.com/martinribelotta/h730duino-firmwa
 
 ![](https://avatars.githubusercontent.com/u/96517772?v=4)
 
-The WCH risc-v processors are great, but the dependence on the oficial IDE is very problematic for old fashinist unix hackers.
+The WCH RISC-V processors are great, but the dependence on the official IDE is very problematic for old-fashioned Unix hackers.
 
-This project provides an (unoficial) support for WCH CH32V307 SDK that compiles all exaples.
+This project provides unofficial support for the WCH CH32V307 SDK, compiling all examples.
 
 ## [Application Launcher](https://gitlab.com/martinribelotta/launcher)
 
 This program serves as a launcher for an application suite or a set of applications with a common entry point.
 
-The idea behind this project is to provide a single entry point and environment management for disparate tools and programs that can work in conjunction to offer software suites.
+The idea behind this is to provide a single entry point and environment management for unrelated tools and programs that can work in conjunction to offer software suites.
+
+This launcher offer:
+
+ - Common entry point for your applications
+ - User defined environment and PATH management (you can specify the paths relative to the launcher)
+ - Custom icons and resource management
+ - Custom command execution
 
 It is primarily developed to integrate third-party tools as an IDE.
 
@@ -74,7 +80,8 @@ It is primarily developed to integrate third-party tools as an IDE.
 
 ## [Embedded IDE](https://github.com/martinribelotta/embedded-ide)
 
-And unmaintained (but usefull for now) little IDE based on Makefile and command line tools
+And unmaintained (but usefull for now) little IDE based on Makefile and command line tools.
+
+The goal of this project is provide a simple editor with access to common build tools like make, ctags, find and others.
 
 ![](https://github.com/martinribelotta/embedded-ide/raw/master/docs/screen_0.png)
-
