@@ -109,10 +109,10 @@ paginate = 20
   name = "Projects"
   weight = 3
   url = "projects/"
-# [[menu.main]]
-#   name = "Blog"
-#   weight = 4
-#   url  = "post/"
+[[menu.main]]
+  name = "Blog"
+  weight = 4
+  url  = "posts/"
 [[menu.main]]
   name = "Contact"
   weight = 5
