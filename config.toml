@@ -1,6 +1,5 @@
 baseurl = "https://martinribelotta.github.io"
 title = "Development Services"
-# theme = ["hugo-embed-pdf-shortcode", "hugo-dynamic-tabs", "hugo-coder"]
 theme = ["hugo-embed-pdf-shortcode", "hugo-coder"]
 languagecode = "en"
 defaultcontentlanguage = "en"
