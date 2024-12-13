@@ -6,4 +6,12 @@ aliases = ["cv", "curriculum", "curriculum-vitae", "about-us", "contact"]
 author = "Martin Ribelotta"
 +++
 
-{{< embed-pdf url="/cv-martin-ribelotta-en.pdf" >}}
+For greater clarity, I split my CV in [IoT/General](#iotgeneral) and [Aerospace](#aerospace-version) version.
+
+# IoT/General
+
+<iframe width="120%" height="500px" src="/cv_martinribelotta_english-general.html" title="description"></iframe>
+
+# Aerospace Version
+
+<iframe width="120%" height="500px" src="/cv_martinribelotta_en_aerospace.html" title="description"></iframe>
