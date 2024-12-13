@@ -1,0 +1,23 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "hugo",
+			"task": "",
+			"group": "build",
+			"problemMatcher": [],
+			"label": "hugo: Build site"
+		},
+		{
+			"type": "hugo",
+			"task": "server",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"isBackground": true,
+			"problemMatcher": [],
+			"label": "hugo: Serve site"
+		}
+	]
+}
