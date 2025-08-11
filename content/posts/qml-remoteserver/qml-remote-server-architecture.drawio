@@ -1,0 +1,151 @@
+<mxfile host="65bd71144e">
+    <diagram id="qml-remote-server-architecture" name="QML Remote Server Architecture">
+        <mxGraphModel dx="565" dy="402" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="title" value="QML Remote Server Architecture" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=24;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="350" y="20" width="470" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="embedded" value="Embedded Device" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=16;fontStyle=1;align=left;verticalAlign=top;spacingLeft=9;" parent="1" vertex="1">
+                    <mxGeometry x="50" y="150" width="200" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="mcu" value="Microcontroller&#xa;(Arduino, ESP32, STM32)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
+                    <mxGeometry x="60" y="180" width="80" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="sensors" value="Sensors&#xa;&amp; Actuators" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
+                    <mxGeometry x="150" y="180" width="80" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="serial-conn" value="Serial/UART&#xa;Connection" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
+                    <mxGeometry x="320" y="120" width="120" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="tcp-conn" value="TCP/IP&#xa;Connection" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
+                    <mxGeometry x="320" y="220" width="120" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="slip-layer" value="SLIP Protocol Layer&#xa;(RFC 1055)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=14;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="500" y="150" width="150" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="server-core" value="QML Remote Server" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=18;fontStyle=1;verticalAlign=bottom;" parent="1" vertex="1">
+                    <mxGeometry x="720" y="100" width="350" height="180" as="geometry"/>
+                </mxCell>
+                <mxCell id="bridge" value="GenericQMLBridge" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="740" y="120" width="130" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="discovery" value="Property&#xa;Discovery" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f0f0f0;strokeColor=#666666;" parent="1" vertex="1">
+                    <mxGeometry x="890" y="120" width="70" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="protocol" value="Protocol&#xa;Handler" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f0f0f0;strokeColor=#666666;" parent="1" vertex="1">
+                    <mxGeometry x="980" y="120" width="70" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="qml-engine" value="QML Engine" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="740" y="190" width="130" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="observer" value="Property&#xa;Observer" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f0f0f0;strokeColor=#666666;" parent="1" vertex="1">
+                    <mxGeometry x="890" y="190" width="70" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="processor" value="Command&#xa;Processor" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f0f0f0;strokeColor=#666666;" parent="1" vertex="1">
+                    <mxGeometry x="980" y="190" width="70" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="dashboard" value="QML Dashboard" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=16;fontStyle=1;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="770" y="340" width="250" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="real-time" value="Real-time&#xa;Data Display" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f0f0f0;strokeColor=#666666;" parent="1" vertex="1">
+                    <mxGeometry x="780" y="380" width="70" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="animations" value="Animations&#xa;&amp; Effects" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f0f0f0;strokeColor=#666666;" parent="1" vertex="1">
+                    <mxGeometry x="860" y="380" width="70" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="responsive" value="Responsive&#xa;Layout" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f0f0f0;strokeColor=#666666;" parent="1" vertex="1">
+                    <mxGeometry x="940" y="380" width="70" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="commands-box" value="Protocol Commands" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=14;fontStyle=1;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="80" y="350" width="200" height="180" as="geometry"/>
+                </mxCell>
+                <mxCell id="cmd1" value="GET_PROPERTY_LIST (0x01)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="90" y="380" width="180" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="cmd2" value="SET_PROPERTY (0x02)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="90" y="400" width="180" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="cmd3" value="INVOKE_METHOD (0x03)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="90" y="420" width="180" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="cmd4" value="HEARTBEAT (0x04)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="90" y="440" width="180" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="cmd5" value="WATCH_PROPERTY (0x20)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="90" y="460" width="180" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="resp1" value="RESP_PROPERTY_LIST (0x81)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="90" y="480" width="180" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="resp2" value="RESP_PROPERTY_CHANGE (0x82)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="90" y="500" width="180" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="dataflow-box" value="Data Types" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=14;fontStyle=1;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="350" y="350" width="150" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="bool-type" value="bool (ON/OFF states)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="360" y="380" width="130" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="int-type" value="int (levels, counts)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="360" y="400" width="130" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="float-type" value="float (temperatures)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="360" y="420" width="130" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="string-type" value="string (status messages)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="360" y="440" width="130" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="arrow1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" source="embedded" target="serial-conn" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="arrow2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" source="embedded" target="tcp-conn" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="arrow3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" source="serial-conn" target="slip-layer" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="arrow4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" source="tcp-conn" target="slip-layer" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="arrow5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=3;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" source="slip-layer" target="server-core" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="arrow6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=3;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" source="server-core" target="dashboard" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="slip-label" value="SLIP + CBOR" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=2;" parent="1" vertex="1">
+                    <mxGeometry x="580" y="120" width="80" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="properties-label" value="Properties &amp; Methods" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=2;" parent="1" vertex="1">
+                    <mxGeometry x="820" y="310" width="120" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="features-box" value="Key Features" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=14;fontStyle=1;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="550" y="350" width="180" height="180" as="geometry"/>
+                </mxCell>
+                <mxCell id="feature1" value="✓ Dynamic Property Discovery" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="560" y="380" width="160" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="feature2" value="✓ Real-time Updates" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="560" y="400" width="160" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="feature3" value="✓ Dual Communication" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="560" y="420" width="160" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="feature4" value="✓ SLIP Protocol" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="560" y="440" width="160" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="feature5" value="✓ Cross-platform" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="560" y="460" width="160" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="feature6" value="✓ Responsive Dashboard" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="560" y="480" width="160" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="feature7" value="✓ Multiple Client Support" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="560" y="500" width="160" height="20" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
