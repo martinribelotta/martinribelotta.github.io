@@ -96,6 +96,14 @@ tableOfContents = true
   target = "_blank"
   url = "https://www.instagram.com/martinribelotta/"
   desc = "View my profile on Instagram"
+[[params.social]]
+  name = "WhatsApp"
+  icon = "fa-brands fa-whatsapp fa-2x"
+  weight = 6
+  target = "_blank"
+  url = "https://wa.me/5492944640761"
+  desc = "Chat with me on WhatsApp"
+
 
 # Menu links
 [[menu.main]]
