@@ -103,6 +103,13 @@ tableOfContents = true
   target = "_blank"
   url = "https://www.instagram.com/martin.ribelotta.engineering/"
   desc = "View my profile on Instagram"
+[[params.social]]
+  name = "Twitter"
+  icon = "fa-brands fa-x-twitter fa-2x"
+  weight = 7
+  target = "_blank"
+  url = "https://twitter.com/ribelotta"
+  desc = "View my profile on X (formerly Twitter)"
 
 # Menu links
 [[menu.main]]
