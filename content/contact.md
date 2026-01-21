@@ -11,4 +11,4 @@ Let's connect and explore possibilities in the ever-evolving landscape of electr
 
 <i class="fa fa-envelope fa-1x"></i> [mailto: Martin Ribelotta \<martinribelotta@gmail.com\>](mailto:martinribelotta@gmail)
 
-<i class="fa-brands fa-whatsapp fa-1x"></i> [Contact me on WhatsApp](https://wa.me/5492944640761)
+<i class="fa-brands fa-whatsapp fa-1x"></i> [Contact me on WhatsApp on +5492944640761](https://wa.me/5492944640761)
