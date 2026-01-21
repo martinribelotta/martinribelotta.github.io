@@ -73,7 +73,7 @@ tableOfContents = true
   icon = "fa fa-envelope fa-2x"
   weight = 2
   target = "_blank"
-  url = "mailto:martinribelotta@gmail.com"
+  url = "mailto:martinribelotta@gmail.com?subject=Hello%2C%20Martin%21%20I%20am%20contacting%20you%20from%20your%20website%20homepage."
   desc = "Ask a question directly to my mail"
 [[params.social]]
   name = "LinkedIn"
