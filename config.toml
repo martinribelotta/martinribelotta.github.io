@@ -66,7 +66,7 @@ tableOfContents = true
   icon = "fa-brands fa-whatsapp fa-2x"
   weight = 1
   target = "_blank"
-  url = "https://wa.me/5492944640761"
+  url = "https://wa.me/5492944640761?text=Hello%2C%20Martin%21%20I%20would%20like%20to%20get%20in%20touch%20with%20you."
   desc = "Chat with me on WhatsApp"
 [[params.social]]
   name = "mailto"
