@@ -10,9 +10,9 @@ For greater clarity, I split my CV in [IoT/General](#iotgeneral) and [Aerospace]
 
 # IoT/General
 
-[Download in PDF](/cv_martinribelotta_english-iot.pdf)
+[Download in PDF](/cv_martinribelotta_en_iot.pdf)
 
-<iframe width="120%" height="500px" src="/cv_martinribelotta_english-general.html" title="description"></iframe>
+<iframe width="120%" height="500px" src="/cv_martinribelotta_en_iot.html" title="description"></iframe>
 
 # Aerospace Version
 
