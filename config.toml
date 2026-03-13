@@ -33,8 +33,8 @@ tableOfContents = true
 
 [params]
   author = "Martin Ribelotta"
-  info = "Embedded Developer and Electronics Specialist"
-  description = "Martin Ribelotta's personal website"
+  info = "Embedded Systems Consulting"
+  description = "I am an embedded systems developer with over 10 years of experience in firmware development for microcontrollers and embedded platforms. I specialize in designing and implementing efficient, reliable, and scalable embedded software solutions for a wide range of applications. My expertise includes working with various microcontroller architectures, real-time operating systems (RTOS), and low-level programming languages such as C and C++. I have a proven track record of delivering high-quality firmware that meets the specific needs of my clients, whether it's for consumer electronics, industrial automation, or IoT devices. I am passionate about staying up-to-date with the latest advancements in embedded technology and continuously improving my skills to provide the best possible solutions for my clients."
   keywords = "embedded systems developer, firmware developer, embedded software engineer, embedded firmware development, bare-metal firmware, STM32 firmware development, ARM Cortex-M, RISC-V embedded development, RTOS embedded systems, low-level embedded programming, microcontroller firmware, embedded systems consultant, firmware engineering services, embedded software consulting, custom firmware development, embedded systems design, C embedded programming, C++ embedded systems, bare-metal C, Makefile embedded, cross-compilation, embedded toolchain, ELF loader embedded, embedded application launcher, embedded IDE, remote QML GUI, embedded TCP MQTT integration, lightweight embedded frameworks, minimal embedded runtime, embedded diagnostics tools, embedded logging system, microcontroller bootloader"
   avatarurl = "images/avatar.jpg"
   #gravatar = "john.doe@example.com"
@@ -106,9 +106,9 @@ tableOfContents = true
 
 # Menu links
 [[menu.main]]
-  name = "About"
+  name = "Services"
   weight = 1
-  url = "about/"
+  url = "services/"
 [[menu.main]]
   name = "Curriculum"
   weight = 2
@@ -122,6 +122,6 @@ tableOfContents = true
   weight = 4
   url  = "posts/"
 [[menu.main]]
-  name = "Contact"
+  name = "Hiring Me"
   weight = 5
   url = "contact/"

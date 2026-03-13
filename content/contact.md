@@ -1,9 +1,18 @@
 +++
-title = "Contact"
+title = "Hire an Embedded Systems Expert"
 slug = "contact"
 +++
 
-Let's connect and explore possibilities in the ever-evolving landscape of electronics and embedded systems! 🛠️🔧
+I provide remote consulting for companies developing embedded products.
+
+Typical engagements:
+
+- firmware architecture
+- hardware bring-up
+- debugging complex systems
+- IoT integration
+
+Available worldwide for remote work.
 
 <i class="fa-brands fa-linkedin fa-1x"></i> [My LinkedIn site](https://www.linkedin.com/in/martin-ribelotta/)
 
