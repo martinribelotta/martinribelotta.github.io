@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Development Services</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content on Development Services</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 13 Mar 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Embedded Systems Consulting</title>
+      <link>http://localhost:1313/services/</link>
+      <pubDate>Fri, 13 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/services/</guid>
+      <description>&lt;p&gt;I provide consulting and development services for companies building embedded systems and connected devices.&lt;/p&gt;&#xA;&lt;h2 id=&#34;firmware-development&#34;&gt;&#xD;&#xA;  Firmware Development&#xD;&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#firmware-development&#34;&gt;&#xD;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xD;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xD;&#xA;  &lt;/a&gt;&#xD;&#xA;&lt;/h2&gt;&#xD;&#xA;&lt;p&gt;Development of robust firmware for embedded devices.&lt;/p&gt;&#xA;&lt;p&gt;Typical work includes:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Bare-metal firmware&lt;/li&gt;&#xA;&lt;li&gt;RTOS integration&lt;/li&gt;&#xA;&lt;li&gt;Device drivers&lt;/li&gt;&#xA;&lt;li&gt;Performance optimization&lt;/li&gt;&#xA;&lt;li&gt;Memory and power optimization&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr /&gt;&#xA;&lt;h2 id=&#34;hardware-bring-up&#34;&gt;&#xD;&#xA;  Hardware Bring-up&#xD;&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#hardware-bring-up&#34;&gt;&#xD;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xD;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xD;&#xA;  &lt;/a&gt;&#xD;&#xA;&lt;/h2&gt;&#xD;&#xA;&lt;p&gt;Support during early hardware development stages.&lt;/p&gt;&#xA;&lt;p&gt;Services include:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Board bring-up&lt;/li&gt;&#xA;&lt;li&gt;Bootloader development&lt;/li&gt;&#xA;&lt;li&gt;Peripheral initialization&lt;/li&gt;&#xA;&lt;li&gt;Debugging hardware issues&lt;/li&gt;&#xA;&lt;li&gt;JTAG/SWD debugging&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr /&gt;&#xA;&lt;h2 id=&#34;iot-systems&#34;&gt;&#xD;&#xA;  IoT Systems&#xD;&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#iot-systems&#34;&gt;&#xD;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xD;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xD;&#xA;  &lt;/a&gt;&#xD;&#xA;&lt;/h2&gt;&#xD;&#xA;&lt;p&gt;Development of connected embedded systems.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>QML Remote Server: Dynamic GUI Frontend for Embedded Devices</title>
+      <link>http://localhost:1313/posts/qml-remoteserver/</link>
+      <pubDate>Sun, 10 Aug 2025 10:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/qml-remoteserver/</guid>
+      <description>A Qt/QML-based server application that provides dynamic GUI frontends for embedded devices through standardized communication protocols, enabling real-time visualization and control.</description>
+    </item>
+    <item>
+      <title>Bridging Raw TCP Protocols to MQTT Topics</title>
+      <link>http://localhost:1313/posts/rawtcp-to-mqtt-bridge/</link>
+      <pubDate>Wed, 18 Jun 2025 01:08:26 +0000</pubDate>
+      <guid>http://localhost:1313/posts/rawtcp-to-mqtt-bridge/</guid>
+      <description>Connect devices using simple binary TCP protocols to modern MQTT-based infrastructures with a robust, configurable, and extensible bridge.</description>
+    </item>
+    <item>
+      <title>WCH RISC-V Microcontroller offers</title>
+      <link>http://localhost:1313/posts/wch-mcu/</link>
+      <pubDate>Sat, 09 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/wch-mcu/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;banner.png&#34; alt=&#34;banner&#34; /&gt;&lt;/p&gt;&#xA;&lt;p&gt;WinChipHead (WCH) is a Chinese semiconductor company with extensive experience in the industry since its establishment in 2004. The company excels at providing solutions for embedded consumer applications, including USB hubs, Ethernet bridges, PCIe peripherals, and various types of microcontrollers. Especially in microcontrollers, the company has an interesting portfolio of parts that have unique characteristics.&lt;/p&gt;&#xA;&lt;p&gt;Originally, they offered a plethora of 8-bit MCUs with a similar (but not the same) architecture to Microchip PIC14/16 MCUs and the MCS51 family. With this product, WCH has hit a home run by providing one of the most cost-effective MCS51-compatible MCUs with USB support.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>About</title>
+      <link>http://localhost:1313/about/</link>
+      <pubDate>Sat, 02 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/about/</guid>
+      <description>&lt;h1 id=&#34;-embedded-system-developer&#34;&gt;&#xD;&#xA;  🛠️ Embedded System Developer&#xD;&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#-embedded-system-developer&#34;&gt;&#xD;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xD;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xD;&#xA;  &lt;/a&gt;&#xD;&#xA;&lt;/h1&gt;&#xD;&#xA;&lt;h2 id=&#34;electronic-systems-specialist&#34;&gt;&#xD;&#xA;  Electronic Systems Specialist&#xD;&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#electronic-systems-specialist&#34;&gt;&#xD;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xD;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xD;&#xA;  &lt;/a&gt;&#xD;&#xA;&lt;/h2&gt;&#xD;&#xA;&lt;p&gt;Passionate about crafting innovative solutions in the realm of embedded systems, I am a specialist with a keen focus on mission-critical and industrial projects. My expertise lies in designing and implementing cutting-edge solutions that seamlessly integrate hardware and software to meet the rigorous demands of industrial applications.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Curriculum Vitae</title>
+      <link>http://localhost:1313/cv/</link>
+      <pubDate>Sat, 02 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/cv/</guid>
+      <description>&lt;p&gt;For greater clarity, I split my CV in &lt;a href=&#34;#iotgeneral&#34; &gt;IoT/General&lt;/a&gt; and &lt;a href=&#34;#aerospace-version&#34; &gt;Aerospace&lt;/a&gt; version.&lt;/p&gt;&#xA;&lt;h1 id=&#34;iotgeneral&#34;&gt;&#xD;&#xA;  IoT/General&#xD;&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#iotgeneral&#34;&gt;&#xD;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xD;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xD;&#xA;  &lt;/a&gt;&#xD;&#xA;&lt;/h1&gt;&#xD;&#xA;&lt;p&gt;&lt;a href=&#34;http://localhost:1313/cv_martinribelotta_en_iot.pdf&#34; &gt;Download in PDF&lt;/a&gt;&lt;/p&gt;&#xA;&lt;iframe width=&#34;120%&#34; height=&#34;500px&#34; src=&#34;http://localhost:1313/cv_martinribelotta_en_iot.html&#34; title=&#34;description&#34;&gt;&lt;/iframe&gt;&#xD;&#xA;&lt;h1 id=&#34;aerospace-version&#34;&gt;&#xD;&#xA;  Aerospace Version&#xD;&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#aerospace-version&#34;&gt;&#xD;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xD;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xD;&#xA;  &lt;/a&gt;&#xD;&#xA;&lt;/h1&gt;&#xD;&#xA;&lt;p&gt;&lt;a href=&#34;http://localhost:1313/cv_martinribelotta_en_aerospace.pdf&#34; &gt;Download in PDF&lt;/a&gt;&lt;/p&gt;&#xA;&lt;iframe width=&#34;120%&#34; height=&#34;500px&#34; src=&#34;http://localhost:1313/cv_martinribelotta_en_aerospace.html&#34; title=&#34;description&#34;&gt;&lt;/iframe&gt;</description>
+    </item>
+    <item>
+      <title>Hire an Embedded Systems Expert</title>
+      <link>http://localhost:1313/contact/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/contact/</guid>
+      <description>&lt;p&gt;I provide remote consulting for companies developing embedded products.&lt;/p&gt;&#xA;&lt;p&gt;Typical engagements:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;firmware architecture&lt;/li&gt;&#xA;&lt;li&gt;hardware bring-up&lt;/li&gt;&#xA;&lt;li&gt;debugging complex systems&lt;/li&gt;&#xA;&lt;li&gt;IoT integration&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Available worldwide for remote work.&lt;/p&gt;&#xA;&lt;p&gt;&lt;i class=&#34;fa-brands fa-linkedin fa-1x&#34;&gt;&lt;/i&gt; &lt;a href=&#34;https://www.linkedin.com/in/martin-ribelotta/&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;My LinkedIn site&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;i class=&#34;fa-brands fa-github fa-1x&#34;&gt;&lt;/i&gt; &lt;a href=&#34;https://github.com/martinribelotta&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;My github projects&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;i class=&#34;fa fa-envelope fa-1x&#34; style=&#34;display: inline; text-align: left;&#34;&gt;&lt;/i&gt; &lt;a href=&#34;mailto:martinribelotta@gmail.com?subject=Inquiry%20from%20martinribelotta.github.io&amp;amp;body=Hello%2C%20I%20found%20you%20on%20your%20personal%20website%20%28martinribelotta.github.io%29%20and%20would%20like%20to%20inquire%20about%20your%20engineering%20services.&#34; &gt;martinribelotta@gmail.com&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;i class=&#34;fa-brands fa-whatsapp fa-1x&#34;&gt;&lt;/i&gt; &lt;a href=&#34;https://wa.me/5492944640761?text=Hello%2C%20I%20found%20you%20on%20your%20personal%20website%20%28martinribelotta.github.io%29%20and%20would%20like%20to%20inquire%20about%20your%20engineering%20services.&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;+5492944640761&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Projects</title>
+      <link>http://localhost:1313/projects/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/</guid>
+      <description>&lt;h1 id=&#34;heres-a-selection-of-my-most-interesting-projects&#34;&gt;&#xD;&#xA;  Here&amp;rsquo;s a selection of my most interesting projects.&#xD;&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#heres-a-selection-of-my-most-interesting-projects&#34;&gt;&#xD;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xD;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xD;&#xA;  &lt;/a&gt;&#xD;&#xA;&lt;/h1&gt;&#xD;&#xA;&lt;div class=&#34;toc&#34;&gt;&#xD;&#xA;  &lt;nav id=&#34;TableOfContents&#34;&gt;&#xA;  &lt;ul&gt;&#xA;    &lt;li&gt;&lt;a href=&#34;#elf-loader&#34;&gt;ELF loader&lt;/a&gt;&lt;/li&gt;&#xA;    &lt;li&gt;&lt;a href=&#34;#embedded-logger&#34;&gt;Embedded Logger&lt;/a&gt;&lt;/li&gt;&#xA;    &lt;li&gt;&lt;a href=&#34;#cortex-m-monitordisassembler&#34;&gt;Cortex-M monitor/disassembler&lt;/a&gt;&lt;/li&gt;&#xA;    &lt;li&gt;&lt;a href=&#34;#stm32h7-boards-and-projects&#34;&gt;STM32H7 boards and projects&lt;/a&gt;&#xA;      &lt;ul&gt;&#xA;        &lt;li&gt;&lt;a href=&#34;#stm32h750-industrial-board&#34;&gt;STM32H750 industrial board&lt;/a&gt;&lt;/li&gt;&#xA;        &lt;li&gt;&lt;a href=&#34;#h750-duino&#34;&gt;H750 duino&lt;/a&gt;&lt;/li&gt;&#xA;      &lt;/ul&gt;&#xA;    &lt;/li&gt;&#xA;    &lt;li&gt;&lt;a href=&#34;#a-makefile-based-ch32v307-environment&#34;&gt;A makefile based, CH32V307 environment&lt;/a&gt;&lt;/li&gt;&#xA;    &lt;li&gt;&lt;a href=&#34;#application-launcher&#34;&gt;Application Launcher&lt;/a&gt;&lt;/li&gt;&#xA;    &lt;li&gt;&lt;a href=&#34;#embedded-ide&#34;&gt;Embedded IDE&lt;/a&gt;&lt;/li&gt;&#xA;  &lt;/ul&gt;&#xA;&lt;/nav&gt;&#xD;&#xA;&lt;/div&gt;&#xA;&lt;h2 id=&#34;elf-loader&#34;&gt;&#xD;&#xA;  &lt;a href=&#34;https://github.com/martinribelotta/elfloader&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ELF loader&lt;/a&gt;&#xD;&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#elf-loader&#34;&gt;&#xD;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xD;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xD;&#xA;  &lt;/a&gt;&#xD;&#xA;&lt;/h2&gt;&#xD;&#xA;&lt;p&gt;The goal of this project is provide a loader for ELF file format for ARMv7-M (thumb-2) architecture (Aka Cortex-M, Cortex-R in Thumb2 mode) over bare-metal or RTOS enviroment.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

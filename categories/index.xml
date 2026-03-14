@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on Development Services</title>
+    <link>http://localhost:1313/categories/</link>
+    <description>Recent content in Categories on Development Services</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 10 Aug 2025 10:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Embedded</title>
+      <link>http://localhost:1313/categories/embedded/</link>
+      <pubDate>Sun, 10 Aug 2025 10:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/categories/embedded/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>IoT</title>
+      <link>http://localhost:1313/categories/iot/</link>
+      <pubDate>Sun, 10 Aug 2025 10:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/categories/iot/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>QML</title>
+      <link>http://localhost:1313/categories/qml/</link>
+      <pubDate>Sun, 10 Aug 2025 10:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/categories/qml/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Qt</title>
+      <link>http://localhost:1313/categories/qt/</link>
+      <pubDate>Sun, 10 Aug 2025 10:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/categories/qt/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Bridges</title>
+      <link>http://localhost:1313/categories/bridges/</link>
+      <pubDate>Wed, 18 Jun 2025 01:08:26 +0000</pubDate>
+      <guid>http://localhost:1313/categories/bridges/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>MQTT</title>
+      <link>http://localhost:1313/categories/mqtt/</link>
+      <pubDate>Wed, 18 Jun 2025 01:08:26 +0000</pubDate>
+      <guid>http://localhost:1313/categories/mqtt/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Protocols</title>
+      <link>http://localhost:1313/categories/protocols/</link>
+      <pubDate>Wed, 18 Jun 2025 01:08:26 +0000</pubDate>
+      <guid>http://localhost:1313/categories/protocols/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Real-Time on Development Services</title>
+    <link>http://localhost:1313/tags/real-time/</link>
+    <description>Recent content in Real-Time on Development Services</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 10 Aug 2025 10:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/real-time/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>QML Remote Server: Dynamic GUI Frontend for Embedded Devices</title>
+      <link>http://localhost:1313/posts/qml-remoteserver/</link>
+      <pubDate>Sun, 10 Aug 2025 10:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/qml-remoteserver/</guid>
+      <description>A Qt/QML-based server application that provides dynamic GUI frontends for embedded devices through standardized communication protocols, enabling real-time visualization and control.</description>
+    </item>
+  </channel>
+</rss>

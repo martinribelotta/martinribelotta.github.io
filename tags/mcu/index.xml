@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>MCU on Development Services</title>
+    <link>http://localhost:1313/tags/mcu/</link>
+    <description>Recent content in MCU on Development Services</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 09 Mar 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/mcu/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>WCH RISC-V Microcontroller offers</title>
+      <link>http://localhost:1313/posts/wch-mcu/</link>
+      <pubDate>Sat, 09 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/wch-mcu/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;banner.png&#34; alt=&#34;banner&#34; /&gt;&lt;/p&gt;&#xA;&lt;p&gt;WinChipHead (WCH) is a Chinese semiconductor company with extensive experience in the industry since its establishment in 2004. The company excels at providing solutions for embedded consumer applications, including USB hubs, Ethernet bridges, PCIe peripherals, and various types of microcontrollers. Especially in microcontrollers, the company has an interesting portfolio of parts that have unique characteristics.&lt;/p&gt;&#xA;&lt;p&gt;Originally, they offered a plethora of 8-bit MCUs with a similar (but not the same) architecture to Microchip PIC14/16 MCUs and the MCS51 family. With this product, WCH has hit a home run by providing one of the most cost-effective MCS51-compatible MCUs with USB support.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
