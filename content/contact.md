@@ -20,4 +20,5 @@ Available worldwide for remote work.
 
 <i class="fa fa-envelope fa-1x" style="display: inline; text-align: left;"></i> [martinribelotta@gmail.com](mailto:martinribelotta@gmail.com?subject=Inquiry%20from%20martinribelotta.github.io&body=Hello%2C%20I%20found%20you%20on%20your%20personal%20website%20(martinribelotta.github.io)%20and%20would%20like%20to%20inquire%20about%20your%20engineering%20services.)
 
-<i class="fa-brands fa-whatsapp fa-1x"></i> [+5492944640761](https://wa.me/5492944640761?text=Hello%2C%20I%20found%20you%20on%20your%20personal%20website%20(martinribelotta.github.io)%20and%20would%20like%20to%20inquire%20about%20your%20engineering%20services.)
+<i class="fa-brands fa-whatsapp fa-1x"></i> [Send me a message to whatsapp](
+    https://wa.me/5492944640761?text=Hello%2C%20I%20found%20you%20on%20your%20personal%20website%20(martinribelotta.github.io)%20and%20would%20like%20to%20inquire%20about%20your%20engineering%20services.)

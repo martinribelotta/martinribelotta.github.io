@@ -1,0 +1,309 @@
+<!doctype html><html lang=en><head><title>QML Remote Server: Dynamic GUI Frontend for Embedded Devices · Development Services</title><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=color-scheme content="light dark"><meta name=author content="Martin Ribelotta"><meta name=description content="A Qt/QML-based server application that provides dynamic GUI frontends for embedded devices through standardized communication protocols, enabling real-time visualization and control."><meta name=keywords content="embedded systems developer,firmware developer,embedded software engineer,embedded firmware development,bare-metal firmware,STM32 firmware development,ARM Cortex-M,RISC-V embedded development,RTOS embedded systems,low-level embedded programming,microcontroller firmware,embedded systems consultant,firmware engineering services,embedded software consulting,custom firmware development,embedded systems design,C embedded programming,C++ embedded systems,bare-metal C,Makefile embedded,cross-compilation,embedded toolchain,ELF loader embedded,embedded application launcher,embedded IDE,remote QML GUI,embedded TCP MQTT integration,lightweight embedded frameworks,minimal embedded runtime,embedded diagnostics tools,embedded logging system,microcontroller bootloader"><meta name=twitter:card content="summary"><meta name=twitter:title content="QML Remote Server: Dynamic GUI Frontend for Embedded Devices"><meta name=twitter:description content="A Qt/QML-based server application that provides dynamic GUI frontends for embedded devices through standardized communication protocols, enabling real-time visualization and control."><meta property="og:url" content="https://martinribelotta.github.io/posts/qml-remoteserver/"><meta property="og:site_name" content="Development Services"><meta property="og:title" content="QML Remote Server: Dynamic GUI Frontend for Embedded Devices"><meta property="og:description" content="A Qt/QML-based server application that provides dynamic GUI frontends for embedded devices through standardized communication protocols, enabling real-time visualization and control."><meta property="og:locale" content="en"><meta property="og:type" content="article"><meta property="article:section" content="posts"><meta property="article:published_time" content="2025-08-10T10:00:00+00:00"><meta property="article:modified_time" content="2025-08-10T10:00:00+00:00"><meta property="article:tag" content="QML"><meta property="article:tag" content="Qt"><meta property="article:tag" content="Embedded"><meta property="article:tag" content="GUI"><meta property="article:tag" content="SLIP"><meta property="article:tag" content="Protocol"><link rel=canonical href=https://martinribelotta.github.io/posts/qml-remoteserver/><link rel=preload href=/fonts/fa-brands-400.woff2 as=font type=font/woff2 crossorigin><link rel=preload href=/fonts/fa-regular-400.woff2 as=font type=font/woff2 crossorigin><link rel=preload href=/fonts/fa-solid-900.woff2 as=font type=font/woff2 crossorigin><link rel=stylesheet href=/css/coder.min.f8ac2fdd0cb7e56145845d949b5c036d40cd5061c013fd446f2f54a63ade62e8.css integrity="sha256-+Kwv3Qy35WFFhF2Um1wDbUDNUGHAE/1Eby9UpjreYug=" crossorigin=anonymous media=screen><link rel=stylesheet href=/css/coder-dark.min.a00e6364bacbc8266ad1cc81230774a1397198f8cfb7bcba29b7d6fcb54ce57f.css integrity="sha256-oA5jZLrLyCZq0cyBIwd0oTlxmPjPt7y6KbfW/LVM5X8=" crossorigin=anonymous media=screen><link rel=icon type=image/svg+xml href=/images/favicon.svg sizes=any><link rel=icon type=image/png href=/images/favicon-32x32.png sizes=32x32><link rel=icon type=image/png href=/images/favicon-16x16.png sizes=16x16><link rel=apple-touch-icon href=/images/apple-touch-icon.png><link rel=apple-touch-icon sizes=180x180 href=/images/apple-touch-icon.png><link rel=manifest href=/site.webmanifest><link rel=mask-icon href=/images/safari-pinned-tab.svg color=#5bbad5></head><body class="preload-transitions colorscheme-auto"><div class=float-container><a id=dark-mode-toggle class=colorscheme-toggle><i class="fa-solid fa-adjust fa-fw" aria-hidden=true></i></a></div><main class=wrapper><nav class=navigation><section class=container><a class=navigation-title href=https://martinribelotta.github.io/>Development Services
+</a><input type=checkbox id=menu-toggle>
+<label class="menu-button float-right" for=menu-toggle><i class="fa-solid fa-bars fa-fw" aria-hidden=true></i></label><ul class=navigation-list><li class=navigation-item><a class=navigation-link href=/services/>Services</a></li><li class=navigation-item><a class=navigation-link href=/cv/>Curriculum</a></li><li class=navigation-item><a class=navigation-link href=/projects/>Projects</a></li><li class=navigation-item><a class=navigation-link href=/posts/>Blog</a></li><li class=navigation-item><a class=navigation-link href=/contact/>Hiring Me</a></li></ul></section></nav><div class=content><section class="container post"><article><header><div class=post-title><h1 class=title><a class=title-link href=https://martinribelotta.github.io/posts/qml-remoteserver/>QML Remote Server: Dynamic GUI Frontend for Embedded Devices</a></h1></div><div class=post-meta><div class=date><span class=posted-on><i class="fa-solid fa-calendar" aria-hidden=true></i>
+<time datetime=2025-08-10T10:00:00Z>August 10, 2025
+</time></span><span class=reading-time><i class="fa-solid fa-clock" aria-hidden=true></i>
+10-minute read</span></div><div class=categories><i class="fa-solid fa-folder" aria-hidden=true></i>
+<a href=/categories/embedded/>Embedded</a>
+<span class=separator>•</span>
+<a href=/categories/qt/>Qt</a>
+<span class=separator>•</span>
+<a href=/categories/qml/>QML</a>
+<span class=separator>•</span>
+<a href=/categories/iot/>IoT</a></div><div class=tags><i class="fa-solid fa-tag" aria-hidden=true></i>
+<span class=tag><a href=/tags/qml/>QML</a>
+</span><span class=separator>•</span>
+<span class=tag><a href=/tags/qt/>Qt</a>
+</span><span class=separator>•</span>
+<span class=tag><a href=/tags/embedded/>Embedded</a>
+</span><span class=separator>•</span>
+<span class=tag><a href=/tags/gui/>GUI</a>
+</span><span class=separator>•</span>
+<span class=tag><a href=/tags/slip/>SLIP</a>
+</span><span class=separator>•</span>
+<span class=tag><a href=/tags/protocol/>Protocol</a>
+</span><span class=separator>•</span>
+<span class=tag><a href=/tags/real-time/>Real-Time</a>
+</span><span class=separator>•</span>
+<span class=tag><a href=/tags/dashboard/>Dashboard</a>
+</span><span class=separator>•</span>
+<span class=tag><a href=/tags/scada/>SCADA</a></span></div></div></header><div class=post-content><h2 id=overview>Overview
+<a class=heading-link href=#overview><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h2><p>The <strong>QML Remote Server</strong> is a practical Qt/QML-based application that provides a straightforward solution to a common embedded systems challenge: displaying sensor data and controlling actuators from resource-constrained devices on graphics-rich systems like embedded Linux platforms.</p><p>This project addresses the typical scenario where you have sensors and actuators connected to microcontrollers (Arduino, ESP32, STM32) that need to be monitored and controlled through modern graphical interfaces. Rather than implementing complex GUI frameworks on the embedded device itself, this solution separates concerns: the embedded device handles hardware interfacing while a separate system manages the user interface through a simple communication protocol.</p><h2 id=the-challenge-of-embedded-gui-development>The Challenge of Embedded GUI Development
+<a class=heading-link href=#the-challenge-of-embedded-gui-development><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h2><p>Developing graphical user interfaces for embedded systems presents several unique challenges:</p><h3 id=resource-constraints>Resource Constraints
+<a class=heading-link href=#resource-constraints><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h3><ul><li><strong>Limited Memory</strong>: Most embedded devices have severely constrained RAM and flash memory</li><li><strong>Processing Power</strong>: GUI rendering can overwhelm modest microcontrollers</li><li><strong>Real-time Requirements</strong>: Many embedded systems cannot afford the overhead of complex UI frameworks</li></ul><h3 id=development-complexity>Development Complexity
+<a class=heading-link href=#development-complexity><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h3><ul><li><strong>Platform Dependencies</strong>: Different embedded platforms require different GUI solutions</li><li><strong>Rapid Prototyping</strong>: Quick iteration on GUI designs is difficult with embedded constraints</li><li><strong>Maintenance Overhead</strong>: GUI updates often require complete firmware updates</li></ul><h3 id=modern-ui-expectations>Modern UI Expectations
+<a class=heading-link href=#modern-ui-expectations><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h3><ul><li><strong>Responsive Design</strong>: Users expect modern, adaptive interfaces that work across devices</li><li><strong>Rich Visualizations</strong>: Complex data visualization requires sophisticated rendering capabilities</li><li><strong>Real-time Updates</strong>: Live data display with smooth animations and transitions</li></ul><h2 id=qml-remote-server-solution>QML Remote Server Solution
+<a class=heading-link href=#qml-remote-server-solution><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h2><p>The QML Remote Server takes a pragmatic approach to this common problem by <strong>separating the GUI from the embedded device entirely</strong>. This is not a revolutionary concept, but rather a practical implementation of a well-established pattern: let each system do what it does best.</p><p>The embedded device focuses on:</p><ul><li>Reading sensors efficiently</li><li>Controlling actuators reliably</li><li>Sending data over simple communication channels</li></ul><p>The display system (embedded Linux, PC, etc.) handles:</p><ul><li>Rich graphical interfaces</li><li>Complex data visualization</li><li>User interaction and animations</li></ul><p>This separation allows developers to use familiar tools and frameworks for GUI development while keeping the embedded firmware simple and focused.</p><h3 id=key-features>Key Features
+<a class=heading-link href=#key-features><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h3><h4 id=automatic-property-discovery><strong>Automatic Property Discovery</strong>
+<a class=heading-link href=#automatic-property-discovery><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h4><p>The system automatically detects and exposes QML properties for remote access, reducing manual configuration:</p><div class=highlight><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-cpp data-lang=cpp><span style=display:flex><span><span style=color:#ff7b72>void</span> GenericQMLBridge<span style=color:#ff7b72;font-weight:700>::</span>discoverProperties()
+</span></span><span style=display:flex><span>{
+</span></span><span style=display:flex><span>    <span style=color:#ff7b72>if</span> (<span style=color:#ff7b72;font-weight:700>!</span>m_rootObject) <span style=color:#ff7b72>return</span>;
+</span></span><span style=display:flex><span>    scanObjectProperties(m_rootObject);
+</span></span><span style=display:flex><span>    qDebug() <span style=color:#ff7b72;font-weight:700>&lt;&lt;</span> <span style=color:#a5d6ff>&#34;Discovered&#34;</span> <span style=color:#ff7b72;font-weight:700>&lt;&lt;</span> m_properties.size() <span style=color:#ff7b72;font-weight:700>&lt;&lt;</span> <span style=color:#a5d6ff>&#34;properties&#34;</span>;
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><h4 id=real-time-updates><strong>Real-time Updates</strong>
+<a class=heading-link href=#real-time-updates><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h4><p>Live synchronization of property values between embedded devices and GUI ensures data consistency:</p><div class=highlight><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-cpp data-lang=cpp><span style=display:flex><span><span style=color:#ff7b72>auto</span> observer <span style=color:#ff7b72;font-weight:700>=</span> QmlPropertyObserver<span style=color:#ff7b72;font-weight:700>::</span>watch(qmlProp, [<span style=color:#ff7b72>this</span>, id](QVariant newValue) {
+</span></span><span style=display:flex><span>    QCborMap change;
+</span></span><span style=display:flex><span>    change[QStringLiteral(<span style=color:#a5d6ff>&#34;id&#34;</span>)] <span style=color:#ff7b72;font-weight:700>=</span> id;
+</span></span><span style=display:flex><span>    change[QStringLiteral(<span style=color:#a5d6ff>&#34;value&#34;</span>)] <span style=color:#ff7b72;font-weight:700>=</span> QCborValue<span style=color:#ff7b72;font-weight:700>::</span>fromVariant(newValue);
+</span></span><span style=display:flex><span>    <span style=color:#8b949e;font-style:italic>// Send property change notification
+</span></span></span><span style=display:flex><span>    sendSlipData(packet);
+</span></span><span style=display:flex><span>});
+</span></span></code></pre></div><h4 id=simple-communication-channels><strong>Simple Communication Channels</strong>
+<a class=heading-link href=#simple-communication-channels><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h4><p>Supports both serial (UART) and TCP/IP communication for flexibility in different deployment scenarios:</p><ul><li><strong>Serial Communication</strong>: Direct UART connection for simple microcontroller setups</li><li><strong>TCP/IP Communication</strong>: Network-based communication for distributed systems or WiFi-enabled devices</li></ul><h4 id=reliable-protocol-implementation><strong>Reliable Protocol Implementation</strong>
+<a class=heading-link href=#reliable-protocol-implementation><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h4><p>Uses Serial Line Internet Protocol (RFC 1055) for reliable packet framing, a well-tested standard:</p><div class=highlight><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-cpp data-lang=cpp><span style=display:flex><span>QByteArray SlipProcessor<span style=color:#ff7b72;font-weight:700>::</span>encodeSlip(<span style=color:#ff7b72>const</span> QByteArray <span style=color:#ff7b72;font-weight:700>&amp;</span>input)
+</span></span><span style=display:flex><span>{
+</span></span><span style=display:flex><span>    QByteArray encoded;
+</span></span><span style=display:flex><span>    <span style=color:#ff7b72>for</span> (<span style=color:#ff7b72>char</span> <span style=color:#79c0ff;font-weight:700>byte</span> : input) {
+</span></span><span style=display:flex><span>        <span style=color:#ff7b72>if</span> ((<span style=color:#ff7b72>uint8_t</span>)byte <span style=color:#ff7b72;font-weight:700>==</span> SLIP_END) {
+</span></span><span style=display:flex><span>            encoded.append(SLIP_ESC);
+</span></span><span style=display:flex><span>            encoded.append(SLIP_ESC_END);
+</span></span><span style=display:flex><span>        } <span style=color:#ff7b72>else</span> <span style=color:#d2a8ff;font-weight:700>if</span> ((<span style=color:#ff7b72>uint8_t</span>)byte <span style=color:#ff7b72;font-weight:700>==</span> SLIP_ESC) {
+</span></span><span style=display:flex><span>            encoded.append(SLIP_ESC);
+</span></span><span style=display:flex><span>            encoded.append(SLIP_ESC_ESC);
+</span></span><span style=display:flex><span>        } <span style=color:#ff7b72>else</span> {
+</span></span><span style=display:flex><span>            encoded.append(byte);
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>    encoded.append(SLIP_END);
+</span></span><span style=display:flex><span>    <span style=color:#ff7b72>return</span> encoded;
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><h4 id=cross-platform-support><strong>Cross-platform Support</strong>
+<a class=heading-link href=#cross-platform-support><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h4><p>Runs on common embedded Linux platforms, desktops, and development systems, making it suitable for both prototyping and production deployments.</p><h2 id=architecture-overview>Architecture Overview
+<a class=heading-link href=#architecture-overview><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h2><p><img src=qml-remote-server-architecture.svg alt="QML Remote Server Architecture"></p><p>The QML Remote Server follows a straightforward client-server architecture with three main layers:</p><div class=mermaid>flowchart TD
+subgraph ED["🔧 Embedded Device"]
+MCU["Microcontroller - Arduino, ESP32, STM32"]
+SENS["Sensors & Actuators - Temperature, Pressure, etc."]
+end
+subgraph COMM["📡 Communication Layer"]
+SERIAL["Serial/UART Connection"]
+TCP["TCP/IP Network"]
+end
+subgraph PROTO["🔒 Protocol Layer"]
+SLIP["SLIP Protocol - RFC 1055"]
+CBOR["CBOR Encoding - Binary Data"]
+end
+subgraph SERVER["🖥️ QML Remote Server"]
+BRIDGE["GenericQMLBridge - Core Coordinator"]
+DISCOVERY["Property Discovery - Auto-detection"]
+ENGINE["QML Engine - Runtime"]
+OBSERVER["Property Observer - Change tracking"]
+end
+subgraph DASH["📊 QML Dashboard"]
+DISPLAY["Real-time Display - Live data"]
+ANIM["Animations & Effects - Visual feedback"]
+LAYOUT["Responsive Layout - Adaptive UI"]
+STATUS["Status Monitoring - Connection state"]
+end
+%% Data Flow
+ED -->|"Raw Data"| COMM
+COMM -->|"Framed Data"| PROTO
+PROTO -->|"Structured Commands"| SERVER
+SERVER -->|"Property Updates"| DASH
+%% Bidirectional Communication
+DASH -.->|"User Commands"| SERVER
+SERVER -.->|"Control Messages"| PROTO
+PROTO -.->|"Encoded Data"| COMM
+COMM -.->|"Device Control"| ED
+%% Styling
+classDef embedded fill:#f8cecc,stroke:#b85450,stroke-width:2px
+classDef comm fill:#e1d5e7,stroke:#9673a6,stroke-width:2px
+classDef protocol fill:#d5e8d4,stroke:#82b366,stroke-width:2px
+classDef server fill:#dae8fc,stroke:#6c8ebf,stroke-width:2px
+classDef dashboard fill:#fff2cc,stroke:#d6b656,stroke-width:2px
+class ED,MCU,SENS embedded
+class COMM,SERIAL,TCP comm
+class PROTO,SLIP,CBOR protocol
+class SERVER,BRIDGE,DISCOVERY,ENGINE,OBSERVER server
+class DASH,DISPLAY,ANIM,LAYOUT,STATUS dashboard</div><script src=https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js></script><script>window.mermaid&&mermaid.initialize({startOnLoad:!0})</script><h3 id=1-genericqmlbridge-main-application-logic>1. GenericQMLBridge (Main Application Logic)
+<a class=heading-link href=#1-genericqmlbridge-main-application-logic><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h3><p>The core component that handles the application logic:</p><ul><li><strong>QML Management</strong>: Loads and manages QML interface files</li><li><strong>Property Discovery</strong>: Automatically detects available properties and methods from the QML interface</li><li><strong>Protocol Handling</strong>: Manages communication over serial and TCP connections</li><li><strong>Command Processing</strong>: Processes incoming data and updates the interface accordingly</li></ul><div class=highlight><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-cpp data-lang=cpp><span style=display:flex><span><span style=color:#ff7b72>enum</span> <span style=color:#f0883e;font-weight:700>ProtocolCommand</span> {
+</span></span><span style=display:flex><span>    CMD_GET_PROPERTY_LIST <span style=color:#ff7b72;font-weight:700>=</span> <span style=color:#a5d6ff>0x01</span>,
+</span></span><span style=display:flex><span>    CMD_SET_PROPERTY      <span style=color:#ff7b72;font-weight:700>=</span> <span style=color:#a5d6ff>0x02</span>,
+</span></span><span style=display:flex><span>    CMD_INVOKE_METHOD     <span style=color:#ff7b72;font-weight:700>=</span> <span style=color:#a5d6ff>0x03</span>,
+</span></span><span style=display:flex><span>    CMD_HEARTBEAT         <span style=color:#ff7b72;font-weight:700>=</span> <span style=color:#a5d6ff>0x04</span>,
+</span></span><span style=display:flex><span>    CMD_WATCH_PROPERTY    <span style=color:#ff7b72;font-weight:700>=</span> <span style=color:#a5d6ff>0x20</span>
+</span></span><span style=display:flex><span>};
+</span></span></code></pre></div><h3 id=2-slipprocessor-communication-layer>2. SlipProcessor (Communication Layer)
+<a class=heading-link href=#2-slipprocessor-communication-layer><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h3><p>Implements standard SLIP protocol for reliable data transmission:</p><ul><li><strong>Packet Framing</strong>: Provides reliable framing for data packets over serial or TCP</li><li><strong>Escape Handling</strong>: Manages escape sequences according to RFC 1055</li><li><strong>Data Integrity</strong>: Ensures data integrity over potentially unreliable communication channels</li></ul><h3 id=3-qml-dashboard-user-interface>3. QML Dashboard (User Interface)
+<a class=heading-link href=#3-qml-dashboard-user-interface><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h3><p>Standard QML interface components that handle display and user interaction:</p><ul><li><strong>Data Display</strong>: Shows sensor readings and system status with appropriate formatting</li><li><strong>Visual Elements</strong>: Provides gauges, indicators, and animations using Qt&rsquo;s built-in capabilities</li><li><strong>Layout Management</strong>: Adapts to different screen sizes using QML&rsquo;s responsive layout features</li><li><strong>Status Information</strong>: Displays connection status and error information</li></ul><h2 id=communication-protocol>Communication Protocol
+<a class=heading-link href=#communication-protocol><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h2><p>The system uses a straightforward binary protocol over SLIP framing with CBOR encoding for efficient data exchange.</p><h3 id=protocol-structure>Protocol Structure
+<a class=heading-link href=#protocol-structure><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h3><div class=highlight><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-plaintext data-lang=plaintext><span style=display:flex><span>┌──────────────┬────────────────────┐
+</span></span><span style=display:flex><span>│ Command/Resp │ CBOR Payload       │
+</span></span><span style=display:flex><span>│   (1 byte)   │ (optional, varies) │
+</span></span><span style=display:flex><span>└──────────────┴────────────────────┘
+</span></span></code></pre></div><h3 id=supported-commands>Supported Commands
+<a class=heading-link href=#supported-commands><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h3><table><thead><tr><th>Code</th><th>Name</th><th>Direction</th><th>Description</th></tr></thead><tbody><tr><td>0x01</td><td>CMD_GET_PROPERTY_LIST</td><td>C→S</td><td>Request available properties</td></tr><tr><td>0x02</td><td>CMD_SET_PROPERTY</td><td>C→S</td><td>Set property values</td></tr><tr><td>0x03</td><td>CMD_INVOKE_METHOD</td><td>C→S</td><td>Invoke methods with parameters</td></tr><tr><td>0x04</td><td>CMD_HEARTBEAT</td><td>C→S</td><td>Keep-alive packet</td></tr><tr><td>0x20</td><td>CMD_WATCH_PROPERTY</td><td>C→S</td><td>Watch properties for changes</td></tr><tr><td>0x81</td><td>RESP_GET_PROPERTY_LIST</td><td>S→C</td><td>Property list response</td></tr><tr><td>0x82</td><td>RESP_PROPERTY_CHANGE</td><td>S→C</td><td>Property change notification</td></tr></tbody></table><h3 id=protocol-state-machine>Protocol State Machine
+<a class=heading-link href=#protocol-state-machine><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h3><div class=mermaid>stateDiagram-v2
+[*] --> Disconnected
+Disconnected --> Connecting : Connect to Server
+Connecting --> Connected : Connection Established
+Connected --> PropertyDiscovery : Request Properties
+PropertyDiscovery --> PropertyWatch : Setup Watching
+PropertyWatch --> ActiveMonitoring : Start Monitoring
+ActiveMonitoring --> ActiveMonitoring : Property Updates
+ActiveMonitoring --> PropertyControl : Set Properties
+PropertyControl --> ActiveMonitoring : Acknowledge
+ActiveMonitoring --> Heartbeat : Periodic Check
+Heartbeat --> ActiveMonitoring : Connection OK
+Connected --> Error : Connection Lost
+PropertyDiscovery --> Error : Discovery Failed
+PropertyWatch --> Error : Watch Setup Failed
+ActiveMonitoring --> Error : Communication Error
+Heartbeat --> Error : Heartbeat Timeout
+Error --> Disconnected : Reset Connection
+ActiveMonitoring --> Disconnected : Explicit Disconnect
+note right of PropertyDiscovery
+GET_PROPERTY_LIST (0x01)
+RESP_PROPERTY_LIST (0x81)
+end note
+note right of PropertyWatch
+WATCH_PROPERTY (0x20)
+end note
+note right of ActiveMonitoring
+RESP_PROPERTY_CHANGE (0x82)
+Real-time updates
+end note
+note right of PropertyControl
+SET_PROPERTY (0x02)
+INVOKE_METHOD (0x03)
+end note
+note right of Heartbeat
+HEARTBEAT (0x04)
+Keep-alive mechanism
+end note</div><script src=https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js></script><script>window.mermaid&&mermaid.initialize({startOnLoad:!0})</script><h3 id=example-communication-session>Example Communication Session
+<a class=heading-link href=#example-communication-session><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h3><div class=mermaid>sequenceDiagram
+participant C as Client
+participant S as Server
+Note over C,S: Initial Connection and Discovery
+C->>+S: GET_PROPERTY_LIST 0x01
+Note right of C: SLIP packet
+S->>-C: RESP_PROPERTY_LIST 0x81
+Note left of S: Returns properties with IDs and types
+Note over C,S: Property Watching Setup
+C->>S: WATCH_PROPERTY 0x20
+Note right of C: Subscribe to property ID 5
+Note over C,S: Real-time Property Updates
+S->>C: RESP_PROPERTY_CHANGE 0x82
+Note left of S: Property 5 changed value
+Note over C,S: Property Control
+C->>S: SET_PROPERTY 0x02
+Note right of C: Set property 5 to value 42
+Note over C,S: Connection Maintenance
+C->>S: HEARTBEAT 0x04
+Note right of C: Keep-alive packet
+Note over C,S: Continuous Monitoring
+loop Property Monitoring
+S->>C: RESP_PROPERTY_CHANGE 0x82
+Note left of S: Live property updates
+end</div><script src=https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js></script><script>window.mermaid&&mermaid.initialize({startOnLoad:!0})</script><h4 id=protocol-flow-breakdown>Protocol Flow Breakdown:
+<a class=heading-link href=#protocol-flow-breakdown><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h4><ol><li><strong>Property Discovery</strong>: Client requests available properties and their types</li><li><strong>Watch Setup</strong>: Client subscribes to specific property changes</li><li><strong>Real-time Updates</strong>: Server sends notifications when watched properties change</li><li><strong>Property Control</strong>: Client can set property values on the server</li><li><strong>Connection Maintenance</strong>: Periodic heartbeats ensure connection stability</li><li><strong>Continuous Monitoring</strong>: Ongoing property change notifications</li></ol><h2 id=practical-implementation-example>Practical Implementation Example
+<a class=heading-link href=#practical-implementation-example><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h2><h3 id=example-dashboard-interface>Example Dashboard Interface
+<a class=heading-link href=#example-dashboard-interface><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h3><p>The included SCADA-style dashboard demonstrates real-world usage:</p><div class=highlight><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-qml data-lang=qml><span style=display:flex><span>ApplicationWindow {
+</span></span><span style=display:flex><span>    property real <span style=color:#ff7b72>temperature:</span> <span style=color:#a5d6ff>25.0</span>
+</span></span><span style=display:flex><span>    property real <span style=color:#ff7b72>pressure:</span> <span style=color:#a5d6ff>1013.25</span>
+</span></span><span style=display:flex><span>    property real <span style=color:#ff7b72>humidity:</span> <span style=color:#a5d6ff>45.0</span>
+</span></span><span style=display:flex><span>    property bool <span style=color:#ff7b72>pump1Active:</span> <span style=color:#79c0ff>false</span>
+</span></span><span style=display:flex><span>    property bool <span style=color:#ff7b72>pump2Active:</span> <span style=color:#79c0ff>false</span>
+</span></span><span style=display:flex><span>    property bool <span style=color:#ff7b72>alarmActive:</span> <span style=color:#79c0ff>false</span>
+</span></span><span style=display:flex><span>    property <span style=color:#ff7b72>int</span> <span style=color:#ff7b72>tankLevel:</span> <span style=color:#a5d6ff>75</span>
+</span></span><span style=display:flex><span>    property <span style=color:#ff7b72>int</span> <span style=color:#ff7b72>setpoint:</span> <span style=color:#a5d6ff>50</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#ff7b72>function</span> formatTemperature(temp) {
+</span></span><span style=display:flex><span>        <span style=color:#ff7b72>if</span> (isNaN(temp)) <span style=color:#ff7b72>return</span> <span style=color:#a5d6ff>&#34;--°C&#34;</span>
+</span></span><span style=display:flex><span>        <span style=color:#ff7b72>return</span> Math.abs(temp) <span style=color:#ff7b72;font-weight:700>&gt;=</span> <span style=color:#a5d6ff>100</span> <span style=color:#ff7b72;font-weight:700>?</span> 
+</span></span><span style=display:flex><span>            Math.round(temp) <span style=color:#ff7b72;font-weight:700>+</span> <span style=color:#a5d6ff>&#34;°C&#34;</span> <span style=color:#ff7b72;font-weight:700>:</span> 
+</span></span><span style=display:flex><span>            temp.toFixed(<span style=color:#a5d6ff>1</span>) <span style=color:#ff7b72;font-weight:700>+</span> <span style=color:#a5d6ff>&#34;°C&#34;</span>
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><h3 id=python-test-client>Python Test Client
+<a class=heading-link href=#python-test-client><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h3><p>A complete Python test client demonstrates protocol implementation:</p><div class=highlight><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#ff7b72>class</span> <span style=color:#f0883e;font-weight:700>DashboardTester</span>:
+</span></span><span style=display:flex><span>    <span style=color:#ff7b72>def</span> <span style=color:#d2a8ff;font-weight:700>send_properties</span>(self, prop_map):
+</span></span><span style=display:flex><span>        cbor_data <span style=color:#ff7b72;font-weight:700>=</span> cbor2<span style=color:#ff7b72;font-weight:700>.</span>dumps(prop_map)
+</span></span><span style=display:flex><span>        data <span style=color:#ff7b72;font-weight:700>=</span> bytes([ProtocolCommand<span style=color:#ff7b72;font-weight:700>.</span>SET_PROPERTY]) <span style=color:#ff7b72;font-weight:700>+</span> cbor_data
+</span></span><span style=display:flex><span>        encoded_data <span style=color:#ff7b72;font-weight:700>=</span> SlipProcessor<span style=color:#ff7b72;font-weight:700>.</span>encode_slip(data)
+</span></span><span style=display:flex><span>        self<span style=color:#ff7b72;font-weight:700>.</span>sock<span style=color:#ff7b72;font-weight:700>.</span>send(encoded_data)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#ff7b72>def</span> <span style=color:#d2a8ff;font-weight:700>watch_properties</span>(self, id_list):
+</span></span><span style=display:flex><span>        cbor_data <span style=color:#ff7b72;font-weight:700>=</span> cbor2<span style=color:#ff7b72;font-weight:700>.</span>dumps(id_list)
+</span></span><span style=display:flex><span>        data <span style=color:#ff7b72;font-weight:700>=</span> bytes([ProtocolCommand<span style=color:#ff7b72;font-weight:700>.</span>WATCH_PROPERTY]) <span style=color:#ff7b72;font-weight:700>+</span> cbor_data
+</span></span><span style=display:flex><span>        encoded_data <span style=color:#ff7b72;font-weight:700>=</span> SlipProcessor<span style=color:#ff7b72;font-weight:700>.</span>encode_slip(data)
+</span></span><span style=display:flex><span>        self<span style=color:#ff7b72;font-weight:700>.</span>sock<span style=color:#ff7b72;font-weight:700>.</span>send(encoded_data)
+</span></span></code></pre></div><h2 id=usage-and-deployment>Usage and Deployment
+<a class=heading-link href=#usage-and-deployment><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h2><h3 id=building-the-project>Building the Project
+<a class=heading-link href=#building-the-project><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h3><div class=highlight><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#8b949e;font-style:italic># Prerequisites: Qt 6.5+, CMake 3.16+, C++17 compiler</span>
+</span></span><span style=display:flex><span>mkdir build <span style=color:#ff7b72;font-weight:700>&amp;&amp;</span> cd build
+</span></span><span style=display:flex><span>cmake ..
+</span></span><span style=display:flex><span>make
+</span></span></code></pre></div><h3 id=running-the-server>Running the Server
+<a class=heading-link href=#running-the-server><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h3><p><strong>For Serial Communication:</strong></p><div class=highlight><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span>./qml-remoteserver examples/dashboard.qml --port /dev/ttyUSB0 --baudrate <span style=color:#a5d6ff>115200</span>
+</span></span></code></pre></div><p><strong>For TCP Communication:</strong></p><div class=highlight><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span>./qml-remoteserver examples/dashboard.qml --tcp <span style=color:#a5d6ff>8080</span>
+</span></span></code></pre></div><h3 id=testing-with-python-client>Testing with Python Client
+<a class=heading-link href=#testing-with-python-client><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h3><div class=highlight><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span>cd examples
+</span></span><span style=display:flex><span>python3 test_dashboard.py --host localhost --port <span style=color:#a5d6ff>8080</span>
+</span></span></code></pre></div><h2 id=use-cases-and-applications>Use Cases and Applications
+<a class=heading-link href=#use-cases-and-applications><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h2><h3 id=typical-embedded-system-scenarios>Typical Embedded System Scenarios
+<a class=heading-link href=#typical-embedded-system-scenarios><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h3><ul><li><strong>Sensor Monitoring</strong>: Display temperature, pressure, humidity readings from microcontroller-based sensors</li><li><strong>Equipment Control</strong>: Control pumps, valves, motors, and other actuators from a central interface</li><li><strong>System Status</strong>: Monitor device health, connection status, and operational parameters</li></ul><h3 id=development-and-prototyping>Development and Prototyping
+<a class=heading-link href=#development-and-prototyping><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h3><ul><li><strong>Rapid Prototyping</strong>: Quick setup of monitoring interfaces for embedded prototypes</li><li><strong>Debug and Testing</strong>: Visual debugging tools for embedded system development</li><li><strong>Educational Projects</strong>: Teaching interface between embedded systems and desktop applications</li></ul><h3 id=industrial-applications>Industrial Applications
+<a class=heading-link href=#industrial-applications><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h3><ul><li><strong>Simple SCADA Systems</strong>: Basic supervisory control for small industrial installations</li><li><strong>Local Monitoring</strong>: On-site monitoring stations for equipment and processes</li><li><strong>Maintenance Interfaces</strong>: Service and calibration interfaces for embedded equipment</li></ul><h2 id=supported-data-types>Supported Data Types
+<a class=heading-link href=#supported-data-types><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h2><p>The system supports all common embedded data types:</p><ul><li><strong><code>bool</code></strong>: Boolean values for digital states (ON/OFF, enabled/disabled)</li><li><strong><code>int</code></strong>: Integer values for counters, levels, and discrete measurements</li><li><strong><code>float/double</code></strong>: Floating-point values for analog measurements (temperature, pressure)</li><li><strong><code>string</code></strong>: Text values for status messages and identifiers</li></ul><h2 id=advantages-and-benefits>Advantages and Benefits
+<a class=heading-link href=#advantages-and-benefits><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h2><h3 id=for-embedded-developers>For Embedded Developers
+<a class=heading-link href=#for-embedded-developers><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h3><ul><li><strong>Simplified Firmware</strong>: No need to implement GUI frameworks on resource-constrained devices</li><li><strong>Faster Development</strong>: Iterate on interfaces without reflashing embedded firmware</li><li><strong>Focus on Core Logic</strong>: Embedded device focuses on sensor reading and actuator control</li></ul><h3 id=for-interface-developers>For Interface Developers
+<a class=heading-link href=#for-interface-developers><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h3><ul><li><strong>Familiar Tools</strong>: Use standard Qt/QML development tools and techniques</li><li><strong>Rich Libraries</strong>: Access to Qt&rsquo;s extensive widget and animation libraries</li><li><strong>Standard Platforms</strong>: Develop for common Linux/desktop environments</li></ul><h3 id=for-system-designers>For System Designers
+<a class=heading-link href=#for-system-designers><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h3><ul><li><strong>Clear Separation</strong>: Well-defined boundary between embedded and display systems</li><li><strong>Flexibility</strong>: GUI can run on different hardware than the embedded device</li><li><strong>Maintainability</strong>: Interface updates don&rsquo;t require embedded firmware changes</li></ul><h2 id=technical-specifications>Technical Specifications
+<a class=heading-link href=#technical-specifications><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h2><h3 id=system-requirements>System Requirements
+<a class=heading-link href=#system-requirements><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h3><ul><li><strong>Qt 6.5+</strong> with QML support</li><li><strong>CMake 3.16+</strong> for build system</li><li><strong>C++17</strong> compatible compiler</li><li><strong>Python 3.6+</strong> for test clients and utilities</li></ul><h3 id=performance-characteristics>Performance Characteristics
+<a class=heading-link href=#performance-characteristics><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h3><ul><li><strong>Low Latency</strong>: Real-time property updates with minimal delay</li><li><strong>Reliable Communication</strong>: SLIP protocol ensures data integrity</li><li><strong>Efficient Encoding</strong>: CBOR provides compact binary encoding</li><li><strong>Scalable Architecture</strong>: Supports multiple concurrent client connections</li></ul><h2 id=future-enhancements>Future Enhancements
+<a class=heading-link href=#future-enhancements><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h2><p>The QML Remote Server architecture provides a solid foundation for future enhancements:</p><h3 id=planned-features>Planned Features
+<a class=heading-link href=#planned-features><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h3><ul><li><strong>Authentication and Security</strong>: Secure communication protocols</li><li><strong>Data Logging</strong>: Historical data storage and retrieval</li><li><strong>Plugin Architecture</strong>: Extensible functionality through plugins</li><li><strong>Web Interface</strong>: Browser-based access to embedded devices</li></ul><h3 id=extension-points>Extension Points
+<a class=heading-link href=#extension-points><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h3><ul><li><strong>Custom Protocols</strong>: Support for additional communication protocols</li><li><strong>Advanced Visualizations</strong>: Integration with charting and graphing libraries</li><li><strong>Mobile Support</strong>: Native mobile applications using Qt for Android/iOS</li></ul><h2 id=conclusion>Conclusion
+<a class=heading-link href=#conclusion><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h2><p>The QML Remote Server represents a paradigm shift in embedded GUI development by completely decoupling the user interface from the embedded device. This approach solves the fundamental challenges of embedded GUI development while providing developers with modern, powerful tools for creating rich, responsive user interfaces.</p><p>By leveraging the strengths of both embedded systems (efficiency, real-time capability, hardware integration) and modern GUI frameworks (rich visualizations, responsive design, cross-platform compatibility), the QML Remote Server enables the creation of sophisticated control and monitoring applications that would be impossible to implement directly on embedded hardware.</p><p>Whether you&rsquo;re developing industrial automation systems, IoT dashboards, testing equipment, or educational platforms, the QML Remote Server provides a robust, flexible foundation for connecting embedded devices to modern user interface expectations.</p><p>The project&rsquo;s open-source nature, comprehensive documentation, and practical examples make it an excellent starting point for anyone looking to bridge the gap between embedded systems and modern GUI applications.</p><hr><p><strong>Project Repository</strong>: <a href=https://github.com/martinribelotta/qml-remoteserver class=external-link target=_blank rel=noopener>github.com/martinribelotta/qml-remoteserver</a></p><p><strong>License</strong>: MIT License - suitable for both commercial and educational use</p></div><footer></footer></article><script src=https://giscus.app/client.js data-repo=martinribelotta/martinribelotta.github.io data-repo-id=R_kgDOLaVDig data-category=General data-category-id=DIC_kwDOLaVDis4CryBH data-mapping=pathname data-strict=0 data-reactions-enabled=1 data-emit-metadata=0 data-input-position=bottom data-theme=preferred_color_scheme data-lang=es crossorigin=anonymous async></script></section></div><footer class=footer><section class=container>©
+2024 -
+2026
+Martin Ribelotta
+·
+Powered by <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a> & <a href=https://github.com/luizdepra/hugo-coder/ target=_blank rel=noopener>Coder</a>.</section></footer></main><script src=https://cdn.jsdelivr.net/npm/mermaid@9.3.0/dist/mermaid.min.js integrity="sha256-QdTG1YTLLTwD3b95jLqFxpQX9uYuJMNAtVZgwKX4oYU=" crossorigin=anonymous></script><script>mermaid.initialize({startOnLoad:!0})</script><script src=/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-E962FFEWTP"></script><script>var doNotTrack=!1,dnt=navigator.doNotTrack||window.doNotTrack||navigator.msDoNotTrack,doNotTrack=dnt=="1"||dnt=="yes";if(!doNotTrack){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-E962FFEWTP")}</script></body></html>
