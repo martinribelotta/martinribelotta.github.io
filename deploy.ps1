@@ -53,10 +53,14 @@ try {
     Write-Host '3) Sincronizando public hacia master...'
     Push-Location $publishWorktree
     $enteredPublishWorktree = $true
+
+    Invoke-Checked -Command 'git fetch origin master' -ErrorMessage 'No se pudo actualizar referencias de origin/master'
+    Invoke-Checked -Command 'git merge --ff-only origin/master' -ErrorMessage 'No se pudo fast-forward master con origin/master'
+
     Get-ChildItem -Force | Where-Object { $_.Name -ne '.git' } | Remove-Item -Recurse -Force
 
     $sourcePublic = Join-Path $repoRoot 'public'
-    $robocopyOutput = & robocopy $sourcePublic $publishWorktree /MIR /NFL /NDL /NJH /NJS /NP
+    $robocopyOutput = & robocopy $sourcePublic $publishWorktree /E /NFL /NDL /NJH /NJS /NP
     $robocopyExit = $LASTEXITCODE
     if ($robocopyExit -gt 7) {
         throw "Robocopy fallo con codigo $robocopyExit"
@@ -79,6 +83,12 @@ finally {
     if ($enteredPublishWorktree) {
         Pop-Location
     }
-    git worktree remove --force $publishWorktree 2>$null | Out-Null
+    $worktreeGitFile = Join-Path $publishWorktree '.git'
+    if (Test-Path $worktreeGitFile) {
+        & git worktree remove --force $publishWorktree *> $null
+    }
+    elseif (Test-Path $publishWorktree) {
+        Remove-Item -Recurse -Force $publishWorktree
+    }
     Pop-Location
 }
